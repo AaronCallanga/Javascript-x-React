@@ -69,3 +69,22 @@ const fetchUserData = async () => {     // or   async function fetchUserData() {
 }
 
 fetchUserData();
+
+//=============================================================================================================
+// Promise.all() - When you need to perform multiple independent asynchronous (concurrent) operations and wait for all of them to complete
+async function fetchParallelData() {
+  try {
+    const [userData, postsData] = await Promise.all([
+      fetch('https://api.example.com/users/1').then(res => res.json()),
+      fetch('https://api.example.com/posts?userId=1').then(res => res.json())
+    ]);
+
+    console.log('User data:', userData);
+    console.log('Posts data:', postsData);
+
+  } catch (error) {
+    console.error('Error fetching data in parallel:', error);
+  }
+}
+
+fetchParallelData();
