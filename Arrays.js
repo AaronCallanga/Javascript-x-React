@@ -5,7 +5,6 @@ const spread = () => {
   console.log(nums2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 };
 
-
 // =============================================================================================================
 // Map -> transforms each element and returnes the transformed array (requires callback function)
 const map = () => {
@@ -63,7 +62,6 @@ const filter = () => {
   });
   console.log(evens); // [ 2, 4 ]
 
-
   // React - Function to handle the search logic
   /*
   const [products, setProducts] = useState(initialProducts);
@@ -84,6 +82,22 @@ const filter = () => {
   */
 };
 
+// =============================================================================================================
+// Reduce - executes a "reducer" callback function on each element of an array, resulting in a single output value. Used for calculating totals (like a shopping cart total), counting occurrences, or grouping data into a single object.
+const reduce = () => {
+  const products = [
+    { id: 1, name: "iPhone 13", price: 999 },
+    { id: 2, name: "MacBook Pro", price: 1299 },
+    { id: 3, name: "AirPods", price: 199 },
+  ];
+
+  // // The '0' is the initial value for the accumulator
+  const sum = products.reduce(
+    (accumulator, currentProduct) => accumulator + currentProduct.price,
+    0
+  );
+  console.log(sum); // 2497
+};
 
 //map()
 //filter();
