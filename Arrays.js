@@ -43,6 +43,46 @@ const map = () => {
   */
 };
 
+// =============================================================================================================
+const filter = () => {
+  const products = [
+    { id: 1, name: "iPhone 13", price: 999 },
+    { id: 2, name: "MacBook Pro", price: 1299 },
+    { id: 3, name: "AirPods", price: 199 },
+  ];
+
+  // Getting products whose price is > 500
+  const expensiveProducts = products.filter((p) => p.price > 500);
+  console.log(expensiveProducts);
+  // [{ id: 1, name: 'iPhone 13', price: 999 }, { id: 2, name: 'MacBook Pro', price: 1299 }]
+
+  // Getting only even numbers
+  const nums = [1, 2, 3, 4, 5];
+  const evens = nums.filter((i) => {
+    return i % 2 === 0;
+  });
+  console.log(evens); // [ 2, 4 ]
+
+
+  // React - Function to handle the search logic
+  /*
+  const [products, setProducts] = useState(initialProducts);
+  const [searchVal, setSearchVal] = useState('');
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value;
+    setSearchVal(searchTerm);
+
+    // Use the filter method on the original list (initialProducts)
+    const filteredList = initialProducts.filter((product) => {
+      // Return true for items that match the search term
+      return product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+
+    // Update the state with the filtered list
+    setProducts(filteredList);
+  };
+  */
+};
 
 
 //map()
