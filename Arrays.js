@@ -1,11 +1,37 @@
-// Spread - copying the array
+// Spread (...) - used to expand an array's elements into places where zero or more arguments or elements are expected
+
+const rest = () => {
+  const numbers = [10, 20, 30, 40, 50, 60];
+
+  // Destructure the first two, and collect the rest into a 'rest' array
+  const [a, b, ...rest] = numbers;
+
+  console.log(a); // Output: 10
+  console.log(b); // Output: 20
+  console.log(rest); // Output: [30, 40, 50, 60]
+};
+
 const spread = () => {
   const nums = [1, 2, 3, 4, 5];
   const nums2 = [...nums, 6, 7, 8, 9, 10]; // Spreading -> copy then add elements
   console.log(nums2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+  // Combine into a new array
+  const array1 = [1, 2, 3];
+  const array2 = [4, 5, 6];
+  const combinedArray = [...array1, ...array2];
+
+  // Spread the array elements as function arguments
+  function sum(a, b, c) {
+    return a + b + c;
+  }
+  const numbers = [1, 2, 3];
+  const result = sum(...numbers);
+  console.log(result); // 6
 };
 
 // Destructuring - Array Destructuring (Essential for useState hook)
+// Destructuring allows you to assign array elements to variables based on their position
 const destructuring = () => {
   const fruits = ["apple", "banana", "mango"];
   const [first, second, third] = fruits;
@@ -34,7 +60,6 @@ const destructuring = () => {
 
   setStatus(); // prints "Inactive"
 };
-
 
 // =============================================================================================================
 // Map -> transforms each element and returnes the transformed array (requires callback function)
@@ -158,4 +183,5 @@ const reduce = () => {
 //filter();
 //spread();
 //reduce();
-destructuring();
+//destructuring();
+//rest()
