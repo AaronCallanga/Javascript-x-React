@@ -1,5 +1,7 @@
-// Spread (...) - used to expand an array's elements into places where zero or more arguments or elements are expected
 
+// =============================================================================================================
+// Rest - collects the remaining elements into a new array. (not a spread)
+// We are assigning the rest of the element to the array, not spreading/giving all the elements from an array
 const rest = () => {
   const numbers = [10, 20, 30, 40, 50, 60];
 
@@ -11,6 +13,8 @@ const rest = () => {
   console.log(rest); // Output: [30, 40, 50, 60]
 };
 
+// =============================================================================================================
+// Spread (...) - used to expand an array's elements into places where zero or more arguments or elements are expected
 const spread = () => {
   const nums = [1, 2, 3, 4, 5];
   const nums2 = [...nums, 6, 7, 8, 9, 10]; // Spreading -> copy then add elements
@@ -30,6 +34,7 @@ const spread = () => {
   console.log(result); // 6
 };
 
+// =============================================================================================================
 // Destructuring - Array Destructuring (Essential for useState hook)
 // Destructuring allows you to assign array elements to variables based on their position
 const destructuring = () => {
