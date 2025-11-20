@@ -91,12 +91,31 @@ const reduce = () => {
     { id: 3, name: "AirPods", price: 199 },
   ];
 
-  // // The '0' is the initial value for the accumulator
+  // The '0' is the initial value for the accumulator
   const sum = products.reduce(
     (accumulator, currentProduct) => accumulator + currentProduct.price,
     0
   );
   console.log(sum); // 2497
+
+  // Grouping items by their score range
+  const students = [
+    { name: "Kingsley", score: 70 },
+    { name: "Jack", score: 80 },
+    { name: "Joe", score: 63 },
+    { name: "Sarah", score: 93 },
+  ];
+
+  const grouped = students.reduce((acc, student) => {
+    const range = student.score > 75 ? "highScore" : "lowScore";
+    if (!acc[range]) {
+      acc[range] = [];
+    }
+    acc[range].push(student);
+    return acc;
+  }, {});
+
+  console.log(grouped)
 };
 
 //map()
