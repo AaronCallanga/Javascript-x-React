@@ -33,7 +33,7 @@ const m2 = () => {
     isMarried: false,
   };
 
-  const person2 = { ...person, name: "Dave", age: 20 };   // Spread (object spreading)
+  const person2 = { ...person, name: "Dave", age: 20, isRich: true }; // Spread (object spreading) can add properties
   console.log(person2); // { name: 'Dave', age: 20, isMarried: false }
   console.log(person); // { name: 'Aaron', age: 19, isMarried: false }
 };
