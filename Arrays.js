@@ -5,6 +5,37 @@ const spread = () => {
   console.log(nums2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 };
 
+// Destructuring - Array Destructuring (Essential for useState hook)
+const destructuring = () => {
+  const fruits = ["apple", "banana", "mango"];
+  const [first, second, third] = fruits;
+
+  const colors = ["red", "green", "blue"];
+  const [a, , c] = colors; // skips green (by comma + blank space)
+
+  const user_info = ["John", 25];
+  const [name, age, city = "London"] = user_info; // assign default values
+
+  // Swap values using destructuring
+  let lang1 = "C++";
+  let lang2 = "Java";
+  [lang1, lang2] = [lang2, lang1];
+
+  // React
+  const stateArray = [
+    "active",
+    () => {
+      console.log("Inactive");
+      //status = status === "Active" ? "Inactive" : "Active";
+    },
+  ];
+  const [status, setStatus] = stateArray;
+  // status is 'active', setStatus is the function
+
+  setStatus(); // prints "Inactive"
+};
+
+
 // =============================================================================================================
 // Map -> transforms each element and returnes the transformed array (requires callback function)
 const map = () => {
@@ -98,7 +129,7 @@ const reduce = () => {
   );
   console.log(sum); // 2497
 
-  // Grouping items by their score range
+  // Grouping items by their score range (Grouping into a single object)
   const students = [
     { name: "Kingsley", score: 70 },
     { name: "Jack", score: 80 },
@@ -108,17 +139,23 @@ const reduce = () => {
 
   const grouped = students.reduce((acc, student) => {
     const range = student.score > 75 ? "highScore" : "lowScore";
+    // Ensure the array for specific range exists, then push the student
     if (!acc[range]) {
       acc[range] = [];
     }
     acc[range].push(student);
     return acc;
-  }, {});
+  }, {}); // The '{}' is the initial value for the accumulator object. Object that has key(String) + value(Array)
 
-  console.log(grouped)
+  console.log(grouped);
+  /* {
+      lowScore: [ { name: 'Kingsley', score: 70 }, { name: 'Joe', score: 63 } ],
+      highScore: [ { name: 'Jack', score: 80 }, { name: 'Sarah', score: 93 } ]
+    }*/
 };
 
 //map()
 //filter();
 //spread();
-reduce();
+//reduce();
+destructuring();
