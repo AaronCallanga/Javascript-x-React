@@ -1,4 +1,3 @@
-
 // =============================================================================================================
 // Rest - collects the remaining elements into a new array. (not a spread)
 // We are assigning the rest of the element to the array, not spreading/giving all the elements from an array
@@ -184,9 +183,48 @@ const reduce = () => {
     }*/
 };
 
+const find = () => {
+  const numbers = [2, 4, 3, 8, 5];
+  const firstOddNumber = numbers.find((n) => n % 2 !== 0);
+  console.log(firstOddNumber); // 3
+
+  const operatives = [
+    { id: 12, name: "Baze Malbus", isPilot: false, clearanceLevel: 2 },
+    { id: 44, name: "Bodhi Rook", isPilot: true, clearanceLevel: 4 },
+    { id: 59, name: "Chirrut Îmwe", isPilot: true, clearanceLevel: 2 },
+    { id: 122, name: "Jyn Erso", isPilot: false, clearanceLevel: 3 },
+  ];
+  const findFirstPilotWithIdGreaterThan50 = operatives.find((o) => o.isPilot && o.id > 50);
+  // { id: 59, name: 'Chirrut Îmwe', isPilot: true, clearanceLevel: 2 }
+  console.log(findFirstPilotWithIdGreaterThan50);
+  const isAllPilot = operatives.every((o) => o.isPilot);
+  console.log(isAllPilot); // false
+  const atleastOneOperativesFirstNameIsJyn = operatives.some((o) => o.name.startsWith("Jyn"));
+  console.log(atleastOneOperativesFirstNameIsJyn); // true
+};
+
+// =============================================================================================================
+// every() - Checks if all elements satisfy the condition.
+const every = () => {
+  const numbers = [2, 4, 6, 8, 10];
+  const isAllEven = numbers.every((n) => n % 2 === 0);
+  console.log(isAllEven); // true
+};
+
+// =============================================================================================================
+// some() - Checks if at least one element satisfies the condition.
+const some = () => {
+  const numbers = [2, 4, 6, 8, 10];
+  const someAreGreaterThan5 = numbers.some((n) => n > 5);
+  console.log(someAreGreaterThan5); // true
+};
+
 //map()
 //filter();
 //spread();
 //reduce();
 //destructuring();
 //rest()
+//every();
+//some();
+//ind();
