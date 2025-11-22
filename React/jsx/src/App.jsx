@@ -36,7 +36,7 @@ const App = () => {
       {/* --- Section 6: Passing UI as Props in - JSX Children --- */}
       <PassingUIProps />
 
-      {/* --- Section 6: JSX Best Practices --- */}
+      {/* --- Section 7: JSX Best Practices --- */}
       <h1>🎯 Best Practices</h1>
       <KeepItDRY />
       <Memoization />
