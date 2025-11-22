@@ -12,7 +12,7 @@ export const StateWithFetch = () => {
 
   // 3. Use useEffect to handle the side effect (data fetching)
   useEffect(() => {
-    // We define an async function inside useEffect
+    // We define an async function inside useEffect - you can also define outside useEffect and just call it too
     async function loadData() {
       try {
         // Simulate a network request (replace with your actual API endpoint)
