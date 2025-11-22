@@ -1,3 +1,5 @@
+// ✔ Extract UI into Small Components (Composition)
+
 // Instead of creating large, monolithic components, break down complex interfaces into small, reusable, focused components. This improves readability, reusability, and testability.
 //Bad Practice (Monolithic):
 const UserList1 = ({ users }) => {
