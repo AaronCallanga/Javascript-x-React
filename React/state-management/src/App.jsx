@@ -1,4 +1,5 @@
 import { Basic } from "./lessons/Basic";
+import { MultipleVsSingleState } from "./lessons/MultipleVsSingleState";
 import { StateForArrays } from "./lessons/StateForArrays";
 
 
@@ -12,6 +13,9 @@ function App() {
 
       {/* --- Section 2: State for Arrays --- */}
       <StateForArrays />
+
+      {/* --- Section 3: Multiple State Variables vs One State Object --- */}
+      <MultipleVsSingleState />
       
     </>
   );
