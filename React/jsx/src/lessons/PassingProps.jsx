@@ -62,7 +62,7 @@ export const PassingProps = () => {
 
   return (
     <div>
-      <h1>🎯 6. Passing Props in JSX</h1>
+      <h1>🎯 Passing Props in JSX</h1>
       <p>Props allow data flow from parent (App) to child components (User, Button, ProductCard).</p>
       <hr />
 

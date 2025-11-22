@@ -32,6 +32,9 @@ const App = () => {
 
       {/* --- Section 6: Passing UI as Props in - JSX Children --- */}
       <PassingUIProps />
+
+      {/* --- Section 6: JSX Best Practices --- */}
+      
     </>
   );
 };

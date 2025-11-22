@@ -23,13 +23,10 @@ const Card = ({ children }) => {
 export const PassingUIProps = () => {
   return (
     <div>
-      <h1>🎯 10. JSX Children: Passing UI as Props</h1>
+      <h1>🎯 JSX Children: Passing UI as Props</h1>
       <p>The content wrapped by the `&lt;Card&gt;` tags below is automatically passed to the component via the special `children` prop.</p>
       
-      {/* 
-        We are passing a complex block of JSX (h2, p, button) 
-        as a prop to the Card component.
-      */}
+      {/* We are passing a complex block of JSX (h2, p, button) as a prop to the Card component.*/}
       <Card>
         <h2>Welcome to the App!</h2>
         <p>This paragraph and the button below are nested inside the Card component's *children* prop.</p>
