@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 
 // --- Reusable Components (These receive the props) ---
 
@@ -10,6 +10,18 @@ const User = (props) => {
       <h3>User Profile</h3>
       <p>Name: <strong>{props.name}</strong></p>
       <p>Age: <strong>{props.age}</strong></p>
+    </div>
+  );
+};
+
+// Component with default values
+const User2 = ({name, age, id="default-id"}) => {
+  // We can access properties like props.name and props.age
+  return (
+    <div className="user-card" style={{ border: '1px solid #ccc', padding: '10px', margin: '10px' }}>
+      <h3>User Profile: {id}</h3>
+      <p>Name: <strong>{name}</strong></p>
+      <p>Age: <strong>{age}</strong></p>
     </div>
   );
 };
@@ -40,11 +52,12 @@ export const PassingProps = () => {
 
   // Data required for the examples
   const userData = { name: "Aaron", age: 21 };
+  const userData2 = {...userData};
   const productData = { id: 101, name: "React T-Shirt" };
 
   // A function we want to pass down to the Button component
   const handleButtonClick = () => {
-    alert("Button in App component was clicked!");
+    alert("Function Defined = Button in App component was clicked!");
   };
 
   return (
@@ -61,6 +74,8 @@ export const PassingProps = () => {
       <h2>✔ Passing Functions (Event Handlers)</h2>
       {/* Passing a function defined above as a prop */}
       <Button onClick={handleButtonClick} />
+      {/* Passing an inline arrow function as prop */}
+      <Button onClick={() => alert("Inline Arrow Function")}></Button>
       <hr />
 
       <h2>✔ Passing Objects</h2>
@@ -71,6 +86,7 @@ export const PassingProps = () => {
       <h2>✔ Spread Props (...)</h2>
       {/* Using the spread syntax to pass all key-value pairs from the `userData` object as individual props */}
       <User {...userData} />
+      <User2 {...userData2} />
       {/* This renders exactly the same as <User name="Aaron" age={21} /> */}
     </div>
   );
