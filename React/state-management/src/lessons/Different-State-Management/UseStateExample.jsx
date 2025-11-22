@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //1. useState (For UI-Driven Data & Re-Renders)
 //Use useState when changing a value must trigger a UI update (a re-render).
-const UseStateExample = () => {
+export const UseStateExample = () => {
   // Changing `count` re-renders the component and updates the UI
   const [count, setCount] = useState(0);
 

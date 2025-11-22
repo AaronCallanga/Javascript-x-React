@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 // 2. useRef (For Mutable Values & DOM Access, NO Re-renders)
 // Use useRef when you need to store a value that can change without forcing the component to re-render, or to access DOM elements directly. The value is accessed via the .current property.
-const UseRefExample = () => {
+// updated value only shows when other component rerenders
+export const UseRefExample = () => {
   // This value can change, but the component won't re-render when it does.
   const mutableValueRef = useRef(0);
   
@@ -14,7 +15,8 @@ const UseRefExample = () => {
     console.log("Ref value is now:", mutableValueRef.current); 
     
     // Increment the state to *manually* trigger a render only for demonstration purposes
-    setRenders(r => r + 1); 
+    // The value stored in useRef().current updates immediately when you assign a new value to it, but it only appears visually updated in the component's rendered output when that component re-renders for some other reason (usually because you updated a useState variable). 
+    setRenders(r => r + 1); // comment this and see logs while clicking the button
   };
 
   return (
