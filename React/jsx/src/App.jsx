@@ -1,9 +1,10 @@
 import React from "react";
-import { Basic } from "./Basic";
-import { Function } from "./Function";
-import { ConditionalRendering } from "./ConditionalRendering";
-import { ListAndMapping } from "./ListandMapping";
-import { PassingProps } from "./PassingProps";
+import { Basic } from "./lessons/Basic";
+import { Function } from "./lessons/Function";
+import { ConditionalRendering } from "./lessons/ConditionalRendering";
+import { ListAndMapping } from "./lessons/ListAndMapping";
+import { PassingProps } from "./lessons/PassingProps";
+import { PassingUIProps } from "./lessons/PassingUIProps";
 
 // This file demonstrates fundamental JSX concepts within a single App component.
 
@@ -28,6 +29,9 @@ const App = () => {
 
       {/* --- Section 5: Passing Props in JSX --- */}
       <PassingProps />
+
+      {/* --- Section 6: Passing UI as Props in - JSX Children --- */}
+      <PassingUIProps />
     </>
   );
 };
