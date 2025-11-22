@@ -46,8 +46,9 @@ export const StateWithFetch = () => {
     // The empty dependency array `[]` ensures this runs ONLY once when the component mounts
   }, []);
 
-  // --- Rendering Logic ---
+  // --- Rendering Logic --- If error/loading, return immediately
 
+  // Derived UI - user sees based on the data state(loading/error/actual data)
   if (loading) {
     return <div style={{ padding: "20px" }}>Loading products...</div>;
   }

@@ -1,6 +1,7 @@
 import { Basic } from "./lessons/Basic";
 import { CommonPitfalls } from "./lessons/CommonPitfalls";
 import { CustomHook } from "./lessons/CustomHook";
+import DifferentStateManagement from "./lessons/DifferentStateManagement";
 import { FunctionAsState } from "./lessons/FunctionAsState";
 import { MultipleVsSingleState } from "./lessons/MultipleVsSingleState";
 import { StateForArrays } from "./lessons/StateForArrays";
@@ -49,6 +50,9 @@ function App() {
 
       {/* --- Section 8: Persist State in LocalStorage --- */}
       <StateWithLocalStorage />
+
+      {/* --- Section 9: useState vs useRef vs useReducer --- */}
+      <DifferentStateManagement />
     </>
   );
 }
