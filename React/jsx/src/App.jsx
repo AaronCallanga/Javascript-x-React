@@ -5,6 +5,9 @@ import { ConditionalRendering } from "./lessons/ConditionalRendering";
 import { ListAndMapping } from "./lessons/ListAndMapping";
 import { PassingProps } from "./lessons/PassingProps";
 import { PassingUIProps } from "./lessons/PassingUIProps";
+import { KeepItDRY } from "./lessons/BestPractices/KeepItDRY";
+import { Memoization } from "./lessons/BestPractices/Memoization";
+import { SmallComponent } from "./lessons/BestPractices/SmallComponents";
 
 // This file demonstrates fundamental JSX concepts within a single App component.
 
@@ -34,7 +37,10 @@ const App = () => {
       <PassingUIProps />
 
       {/* --- Section 6: JSX Best Practices --- */}
-      
+      <h1>🎯 Best Practices</h1>
+      <KeepItDRY />
+      <Memoization />
+      <SmallComponent />
     </>
   );
 };

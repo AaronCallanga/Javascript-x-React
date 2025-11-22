@@ -40,3 +40,23 @@ const UserList = ({ users }) => {
     </ul>
   );
 };
+
+export const SmallComponent = () => {
+
+   const person1 = {
+    id: 1,
+    name: "Aaron",
+    age: 19,
+  };
+  const person2 = { ...person1, id: 2, name: "Dave" };
+  const person3 = { ...person1, id: 3, name: "Pogi", age: 20 };
+
+  const peoples = [person1, person2, person3];
+
+  return (
+    <>
+      <h3>✔ Extract UI into Small Components (Composition)</h3>
+      <UserList users={peoples}/>
+    </>
+  );
+};

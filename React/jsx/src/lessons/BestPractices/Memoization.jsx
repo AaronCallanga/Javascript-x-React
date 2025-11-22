@@ -2,7 +2,7 @@
 
 //Avoid putting complex or computationally expensive JavaScript functions directly inside the JSX return() block. Every time the component re-renders (which happens often), that expensive function runs again, potentially slowing down your app.
 //Bad Practice (Expensive Calculation inside render):
-const Memoization1 = ({ data }) => {
+const ExpensiveComponent1 = ({ data }) => {
 
   // A very heavy function that processes a large array
   const calculateExpensiveData = (inputData) => {
@@ -24,13 +24,13 @@ const Memoization1 = ({ data }) => {
 // Use useMemo from React to calculate the value once and only recalculate it if the input data actually changes. This prevents re-running the heavy logic on every simple re-render.
 import React, { useMemo, useState } from 'react';
 
-const Memoization = ({ initialData }) => {
+const ExpensiveComponent = ({ initialData }) => {
   const [count, setCount] = useState(0); // This state change causes re-renders
 
   const calculateExpensiveData = (inputData) => {
     // Imagine thousands of operations here...
     console.log("Expensive function ran!"); 
-    return inputData.length * 100;
+    return inputData * 100;
   };
 
   // Use useMemo: the calculation only runs when 'initialData' changes.
@@ -41,9 +41,18 @@ const Memoization = ({ initialData }) => {
 
   return (
     <div>
-      <h1>Total Value: {memoizedValue}</h1>
+      <p>Total Value: {memoizedValue}</p>
       <p>Unrelated Counter: {count}</p>
       <button onClick={() => setCount(c => c + 1)}>Re-render App (cheaply)</button>
     </div>
+  );
+};
+
+export const Memoization = () => {
+  return (
+    <>
+      <h3>✔ Beware of Re-Render Traps (Heavy Functions Inside JSX)</h3>
+      <ExpensiveComponent initialData={10000000000} />
+    </>
   );
 };
