@@ -46,7 +46,8 @@ export const StateForArrays = () => {
   // Note: Replace Entire Array is simply `setTodos(newArrayFromAPIOrWherever)`
   // --- 4. Clear All Items  ---
   const clearAll = () => {
-    setTodos((prevTodos) => []); // Functional update, still better to use
+    //setTodos((prevTodos) => []); // Functional update - only use if previous values matters
+    setTodos([])  // better to use since we will just reset it to empty array
   };
 
   return (

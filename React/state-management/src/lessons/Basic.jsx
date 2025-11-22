@@ -4,6 +4,8 @@ import React, { useState } from "react";
 export const Basic = () => {
   const [count, setCount] = useState(0);
 
+  // Use functional update if the previous values matters for the new value   () => setCount((c) => c + 1)}
+  // Use direct update if the previous value doesn't really need              (e) => setTitle(e.target.value)
   return (
     <>
       <h1>🎯 1. Basic useState</h1>
