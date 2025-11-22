@@ -3,6 +3,7 @@ import { Basic } from "./Basic";
 import { Function } from "./Function";
 import { ConditionalRendering } from "./ConditionalRendering";
 import { ListAndMapping } from "./ListandMapping";
+import { PassingProps } from "./PassingProps";
 
 // This file demonstrates fundamental JSX concepts within a single App component.
 
@@ -24,6 +25,9 @@ const App = () => {
 
       {/* --- Section 4: Lists & Mapping --- */}
       <ListAndMapping />
+
+      {/* --- Section 5: Passing Props in JSX --- */}
+      <PassingProps />
     </>
   );
 };
