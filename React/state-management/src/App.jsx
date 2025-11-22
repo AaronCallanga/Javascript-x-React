@@ -5,6 +5,7 @@ import { FunctionAsState } from "./lessons/FunctionAsState";
 import { MultipleVsSingleState } from "./lessons/MultipleVsSingleState";
 import { StateForArrays } from "./lessons/StateForArrays";
 import { StateWithFetch } from "./lessons/StateWithFetch";
+import { StateWithLocalStorage } from "./lessons/StateWithLocalStorage";
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
 
       {/* --- Section 7: Custom Hook Wrapper (Reuse Logic) --- */}
       <CustomHook />
+
+      <hr />
+
+      {/* --- Section 8: Persist State in LocalStorage --- */}
+      <StateWithLocalStorage />
     </>
   );
 }
