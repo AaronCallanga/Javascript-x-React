@@ -1,11 +1,13 @@
 import React from "react";
-import { AsyncPitfallWrong } from "./Pitfalls/AsyncPitfallWrong";
+import { AsyncPitfall } from "./Pitfalls/AsyncPitfall";
+import { MutationPitfall } from "./Pitfalls/MutationPitfall";
 
 export const CommonPitfalls = () => {
   return (
     <>
       <h1>🎯 4. Common State Pitfalls</h1>
-      <AsyncPitfallWrong />
+      <AsyncPitfall />
+      <MutationPitfall />
     </>
   );
 };

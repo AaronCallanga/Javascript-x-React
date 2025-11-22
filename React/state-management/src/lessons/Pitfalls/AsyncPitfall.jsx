@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // State updates in React are batched for performance and do not happen immediately. The variable you read right after calling setState will hold the old value until the next render cycle.
-export const AsyncPitfallWrong = () => {
+export const AsyncPitfall = () => {
   const [count, setCount] = useState(0);
 
   const handleClickWrong = () => {
