@@ -3,6 +3,7 @@ import { CommonPitfalls } from "./lessons/CommonPitfalls";
 import { FunctionAsState } from "./lessons/FunctionAsState";
 import { MultipleVsSingleState } from "./lessons/MultipleVsSingleState";
 import { StateForArrays } from "./lessons/StateForArrays";
+import { StateWithFetch } from "./lessons/StateWithFetch";
 
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
 
       {/* --- Section 5: Common State Pitfalls --- */}
       <CommonPitfalls />
+
+      <hr />
+
+      {/* --- Section 6: Using State with Fetch --- */}
+      <StateWithFetch />
       
     </>
   );

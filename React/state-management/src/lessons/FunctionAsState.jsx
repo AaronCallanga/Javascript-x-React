@@ -7,7 +7,7 @@ const performHeavyComputation = () => {
   console.log("Running heavy initial computation...");
   let sum = 0;
   // Imagine a massive loop or data processing here
-  for (let i = 0; i < 1000000000; i++) {
+  for (let i = 0; i < 1; i++) { // 1000000000
     sum += Math.sqrt(i);
   }
   console.log("Computation finished.");
