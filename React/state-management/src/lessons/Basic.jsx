@@ -6,6 +6,7 @@ export const Basic = () => {
 
   return (
     <>
+      <h1>🎯 1. Basic useState</h1>
       <h4>A. Primitive Values</h4>
       <p>Count: {count}</p>
       {/* This works but doesn't support concurrent updates which can result to stale data (race condition)*/}
