@@ -1,12 +1,12 @@
-import { Basics } from "./lessons/Basics"
-import { UseEffectWithAsync } from "./lessons/UseEffectWithAsync"
+import { Basics } from "./lessons/Basics";
+import { CleanUp } from "./lessons/CleanUp";
+import { UseEffectWithAsync } from "./lessons/UseEffectWithAsync";
 
 // Think of useEffect as: “Run this side-effect whenever these dependencies change.”
 function App() {
-  
   return (
     <>
-     {/* --- Section 1: Basics of useEffect --- */}
+      {/* --- Section 1: Basics of useEffect --- */}
       <Basics />
 
       <hr />
@@ -15,8 +15,13 @@ function App() {
       <UseEffectWithAsync />
 
       <hr />
+
+      {/* --- Section 3: Clean up Effect --- */}
+      <CleanUp />
+
+      <hr />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

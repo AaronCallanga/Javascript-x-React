@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // 🧩 6. Effect Cleanup with Dependency Changes
 // The cleanup function runs not just when the component unmounts, but also before the next time the effect runs due to a dependency change.
 // Example Use Case: Toggling between users and showing connection status changes.
-const CleanUpWhenDependencyChange = () => {
+export const CleanUpWhenDependencyChange = () => {
   const [userId, setUserId] = useState(1);
 
   useEffect(() => {
