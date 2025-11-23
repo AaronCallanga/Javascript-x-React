@@ -1,4 +1,5 @@
 // ✔ Beware of Re-Render Traps (Heavy Functions Inside JSX)
+// Memoize - cache
 
 //Avoid putting complex or computationally expensive JavaScript functions directly inside the JSX return() block. Every time the component re-renders (which happens often), that expensive function runs again, potentially slowing down your app.
 //Bad Practice (Expensive Calculation inside render):
