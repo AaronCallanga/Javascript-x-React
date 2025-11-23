@@ -1,5 +1,6 @@
 import { Basics } from "./lessons/Basics";
 import { CleanUp } from "./lessons/CleanUp";
+import { DependencyRules } from "./lessons/DependencyRules";
 import { StandardFetchingWithUseEffect } from "./lessons/StandardFetchingWithUseEffect";
 import { UseEffectWithAsync } from "./lessons/UseEffectWithAsync";
 
@@ -24,6 +25,11 @@ function App() {
 
       {/* --- Section 4: UseEffect with Fetch (Standard Pattern) --- */}
       <StandardFetchingWithUseEffect />
+
+      <hr />
+
+      {/* --- Section 5: Dependency Rules --- */}
+      <DependencyRules />
 
       <hr />
     </>

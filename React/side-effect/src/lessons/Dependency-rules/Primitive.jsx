@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // 1. Primitives (string, number, boolean, null, undefined)
 // Primitives are compared by their value. The effect only runs if the actual value changes.
-const PrimitiveDependenciesExample = () => {
+export const Primitive = () => {
   const [count, setCount] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
