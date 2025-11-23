@@ -1,3 +1,4 @@
+import { AbortControllerExample } from "./lessons/AbortControllerExample";
 import { Basics } from "./lessons/Basics";
 import { CleanUp } from "./lessons/CleanUp";
 import { CommonUses } from "./lessons/CommonUses";
@@ -36,6 +37,11 @@ function App() {
 
       {/* --- Section 6: Common Uses --- */}
       <CommonUses />
+
+      <hr />
+
+      {/* --- Section 7: AbortController (Cancel Fetches) --- */}
+      <AbortControllerExample />
 
       <hr />
     </>
