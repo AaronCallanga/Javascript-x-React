@@ -6,7 +6,7 @@ import { Functions } from "./Dependency-rules/Functions";
 export const DependencyRules = () => {
   return (
     <>
-      <h1>🎯 3. Dependency Rules</h1>
+      <h1>🎯 5. Dependency Rules</h1>
       <Primitive />
       <ObjectAndArrays />
       <Functions />
