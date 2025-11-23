@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // 🧩 4. useEffect with Async (Correct Pattern)
 // You cannot make the useEffect function itself async. The correct pattern is to define an asynchronous function inside the effect and then call it immediately.
-
+// Example Use Case: Fetching user data when the component mounts.
 export const UseEffectWithAsync = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

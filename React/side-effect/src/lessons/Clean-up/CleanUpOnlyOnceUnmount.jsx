@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 //🧩 5. Cleanup Effect (Basic return () => {})
 // Use the return function inside useEffect to clean up resources like intervals, subscriptions, or event listeners. This function runs when the component is unmounted.
+// Example Use Case: Staring a simple interval counter.
 const CleanUpOnlyOnceUnmount = () => {
   const [seconds, setSeconds] = useState(0);
 
