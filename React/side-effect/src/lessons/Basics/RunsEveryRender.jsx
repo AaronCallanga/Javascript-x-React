@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+//🧩 1. Basic useEffect (Runs After Every Render)
 // This hook fires every time the component finishes rendering, regardless of which piece of state or prop changed.
 export const RunsEveryRender = () => {
   const [count, setCount] = useState(0);

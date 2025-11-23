@@ -1,3 +1,5 @@
+import { Basics } from "./lessons/Basics"
+
 // Think of useEffect as: “Run this side-effect whenever these dependencies change.”
 function App() {
   

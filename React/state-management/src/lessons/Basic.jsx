@@ -61,6 +61,7 @@ const UserProfileEditor = () => {
     <div
       style={{ padding: "20px", maxWidth: "400px", border: "1px solid #ccc" }}
     >
+      <h1> 🎯 1. Basics</h1>
       <h2>User Profile</h2>
       <p>
         Name: <strong>{user.name}</strong>
