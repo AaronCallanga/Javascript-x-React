@@ -1,7 +1,8 @@
 Get Cheatsheet
 ✅ Advanced Props Patterns (children, render props, compound components)
-✅ State Management (useState, patterns, pitfalls)
 ✅ Event Handling Cheatsheet
 ✅ useEffect Mastery (async, cleanup, dependencies)
-✅ React Fetching Patterns (SWR-style, effect-style, custom hooks)
+✅ React Fetching Patterns (SWR-style, effect-style, React Query, custom hooks)
 ✅ React Component Patterns (Container-Presenter, Hooks pattern)
+✅ Component Architecture Patterns (Smart/Dumb, Hooks, Data-layer)
+✅ React 19 features
