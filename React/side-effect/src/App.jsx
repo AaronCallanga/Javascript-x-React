@@ -1,5 +1,6 @@
 import { Basics } from "./lessons/Basics";
 import { CleanUp } from "./lessons/CleanUp";
+import { StandardFetchingWithUseEffect } from "./lessons/StandardFetchingWithUseEffect";
 import { UseEffectWithAsync } from "./lessons/UseEffectWithAsync";
 
 // Think of useEffect as: “Run this side-effect whenever these dependencies change.”
@@ -18,6 +19,11 @@ function App() {
 
       {/* --- Section 3: Clean up Effect --- */}
       <CleanUp />
+
+      <hr />
+
+      {/* --- Section 4: UseEffect with Fetch (Standard Pattern) --- */}
+      <StandardFetchingWithUseEffect />
 
       <hr />
     </>
