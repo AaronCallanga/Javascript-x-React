@@ -20,7 +20,7 @@ export const RunsOnceOnMount = () => {
     // This return function is the "cleanup" phase (like componentWillUnmount)
     return () => {
       console.log("-> useEffect cleanup ran (Component unmounted). Stopping timer.");
-      clearInterval(intervalId);
+      clearInterval(intervalId); // Stop the timer to prevent memory leaks
     };
   }, []); // <--- The empty array is key
 
