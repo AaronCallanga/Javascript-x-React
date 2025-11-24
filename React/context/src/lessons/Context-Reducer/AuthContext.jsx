@@ -30,7 +30,7 @@ function authReducer(state, action) {
         user: null, 
         isAuthenticated: false 
       };
-    // A case to check persistence on app load
+    // A case to check persistence on app load (after authenticated user open the site again)
     case 'RESTORE_USER':
         return { 
             ...state, 
@@ -46,7 +46,7 @@ function authReducer(state, action) {
 export function AuthProvider({ children }) {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
-  // Example of restoring session when the app loads
+  // Example of restoring session when the app loads (try refreshing after logged in/out)
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser) {

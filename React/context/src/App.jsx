@@ -25,6 +25,11 @@ function App() {
       <ContextAndReducer />
 
       <hr />
+
+            {/* --- Section 3: Avoiding Unnecessary Re-renders --- */}
+      <AvoidUnnecessaryRerenders />
+
+      <hr />
     </>
   );
 }

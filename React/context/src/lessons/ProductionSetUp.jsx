@@ -9,9 +9,9 @@ export const ProductionSetup = () => {
   return (
     // Wrap the entire components with the ThemeProvider
     <ThemeProvider>
-      <div style={{ minHeight: "100vh", transition: "background-color 0.3s" }}>
+      <div style={{ minHeight: "50vh", transition: "background-color 0.3s" }}>
         <header style={{ padding: "20px", borderBottom: "1px solid #ccc" }}>
-          <h1>Context API Production Setup</h1>
+          <h1> 🎯 2. Context API Production Setup</h1>
           <ThemeSwitcher />
         </header>
         <ContentArea />
