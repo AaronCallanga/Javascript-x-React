@@ -30,6 +30,11 @@ function App() {
       <AvoidUnnecessaryRerenders />
 
       <hr />
+
+            {/* --- Section 5: Context for API Auth (Highly Used in React Apps) --- */}
+      <AvoidUnnecessaryRerenders />
+
+      <hr />
     </>
   );
 }

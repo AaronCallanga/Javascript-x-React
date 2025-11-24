@@ -41,3 +41,6 @@ export function useCounterSetValue() {
   }
   return context;
 }
+
+// ✔ components that only read won't re-render
+// ✔ components that only set state won’t re-render
