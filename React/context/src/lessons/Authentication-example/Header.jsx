@@ -1,6 +1,6 @@
-// src/Header.js
+
 import React from 'react';
-import { useAuth } from './context/AuthContext';
+import { useAuth } from './AuthContext';
 
 // Handles Login/Logout UI
 function Header() {
