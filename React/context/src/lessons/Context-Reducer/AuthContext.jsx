@@ -1,10 +1,11 @@
-// src/context/AuthContext.js
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
-// 7a. Create Context
+// This file contains all the authentication logic, the context setup, the reducer, and the custom hook.
+
+// Create Context
 const AuthContext = createContext(null);
 
-// Initial State
+// 7a. Initial State
 const initialState = {
   user: null,
   isAuthenticated: false,
