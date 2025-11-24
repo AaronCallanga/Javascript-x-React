@@ -1,6 +1,8 @@
 // ThemeContext.js
 import { createContext, useContext, useState } from 'react';
 
+// This example sets up a ThemeContext with a default theme value and a dummy toggleTheme function.
+
 // Define the shape of the context value for clarity and default values
 const defaultContextValue = {
   theme: 'light', // Default theme is light
