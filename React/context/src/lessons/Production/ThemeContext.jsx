@@ -35,7 +35,7 @@ export function ThemeProvider({ children }) {
 
 // Create the Custom Hook for Consumption
 // This is best practice for clean usage
-export function useTheme() {
+export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');

@@ -1,4 +1,6 @@
 import { Basics } from "./lessons/Basics";
+import { ProductionSetup } from "./lessons/ProductionSetUp";
+
 
 function App() {
   // Use Context when multiple components need the same state without prop-drilling through 5 parent/children levels.
@@ -14,7 +16,7 @@ function App() {
       <hr />
 
       {/* --- Section 2: Production Setup (Separate Context File | Multiple Values | Derived State) --- */}
-      <Basics />
+      <ProductionSetup />
 
       <hr />
     </>
