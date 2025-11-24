@@ -12,13 +12,15 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem("authToken"));
 
   // Define login function
-  const login = (newToken) => {
+  const login = (newToken) => { 
+    // ... send api request and get token 
     setToken(newToken);
     localStorage.setItem("authToken", newToken);
   };
 
   // Define logout function
   const logout = () => {
+    // ... send api request and blacklist token
     setToken(null);
     localStorage.removeItem("authToken");
   };
@@ -26,7 +28,7 @@ export function AuthProvider({ children }) {
   // The value provided to consumers
   const contextValue = {
     token,
-    isAuthenticated: !!token, // Derived state for convenience
+    isAuthenticated: !!token, // Derived state for convenience (if token exist it turns to false then true)
     login,
     logout,
   };

@@ -2,6 +2,7 @@ import { AvoidUnnecessaryRerenders } from "./lessons/AvoidUnnecessaryRerenders";
 import { Basics } from "./lessons/Basics";
 import { ContextAndAuth } from "./lessons/ContextAndAuth";
 import { ContextAndReducer } from "./lessons/ContextAndReducer";
+import { ContextAndUseEffect } from "./lessons/ContextAndUseEffect";
 import { ProductionSetup } from "./lessons/ProductionSetUp";
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
 
       {/* --- Section 5: Context for API Auth (Highly Used in React Apps) --- */}
       <ContextAndAuth />
+
+      <hr />
+
+      {/* --- Section 6: Fetching with Context + useEffect (Global Data Store) --- */}
+      <ContextAndUseEffect />
 
       <hr />
     </>

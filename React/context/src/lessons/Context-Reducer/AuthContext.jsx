@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from "react";
 
 // This file contains all the authentication logic, the context setup, the reducer, and the custom hook.
 
@@ -14,29 +14,29 @@ const initialState = {
 // 7b. Define the Reducer Function
 function authReducer(state, action) {
   switch (action.type) {
-    case 'LOGIN':
+    case "LOGIN":
       // Store user in local storage (simulated persistence)
-      localStorage.setItem('user', JSON.stringify(action.payload));
-      return { 
-        ...state, 
-        user: action.payload, 
-        isAuthenticated: true 
+      localStorage.setItem("user", JSON.stringify(action.payload));
+      return {
+        ...state,
+        user: action.payload,
+        isAuthenticated: true,
       };
-    case 'LOGOUT':
+    case "LOGOUT":
       // Clear user from local storage
-      localStorage.removeItem('user');
-      return { 
-        ...state, 
-        user: null, 
-        isAuthenticated: false 
+      localStorage.removeItem("user");
+      return {
+        ...state,
+        user: null,
+        isAuthenticated: false,
       };
     // A case to check persistence on app load (after authenticated user open the site again)
-    case 'RESTORE_USER':
-        return { 
-            ...state, 
-            user: action.payload, 
-            isAuthenticated: !!action.payload 
-        };
+    case "RESTORE_USER":
+      return {
+        ...state,
+        user: action.payload,
+        isAuthenticated: !!action.payload,
+      };
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
   }
@@ -48,9 +48,9 @@ export function AuthProvider({ children }) {
 
   // Example of restoring session when the app loads (try refreshing after logged in/out)
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
+    const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
-      dispatch({ type: 'RESTORE_USER', payload: storedUser });
+      dispatch({ type: "RESTORE_USER", payload: storedUser });
     }
   }, []);
 
@@ -67,7 +67,7 @@ export function AuthProvider({ children }) {
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 }
