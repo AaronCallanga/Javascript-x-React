@@ -1,7 +1,7 @@
+import { AvoidUnnecessaryRerenders } from "./lessons/AvoidUnnecessaryRerenders";
 import { Basics } from "./lessons/Basics";
 import { ContextAndReducer } from "./lessons/ContextAndReducer";
 import { ProductionSetup } from "./lessons/ProductionSetUp";
-
 
 function App() {
   // Use Context when multiple components need the same state without prop-drilling through 5 parent/children levels.
@@ -26,7 +26,7 @@ function App() {
 
       <hr />
 
-            {/* --- Section 3: Avoiding Unnecessary Re-renders --- */}
+      {/* --- Section 4: Avoiding Unnecessary Re-renders --- */}
       <AvoidUnnecessaryRerenders />
 
       <hr />

@@ -56,6 +56,7 @@ export function AuthProvider({ children }) {
 
   return (
     // Provide both the state and the dispatch function to all children
+    // Single Context: Bad for performance if values change often (set up two context both for value and setter/dispatch)
     <AuthContext.Provider value={{ state, dispatch }}>
       {children}
     </AuthContext.Provider>

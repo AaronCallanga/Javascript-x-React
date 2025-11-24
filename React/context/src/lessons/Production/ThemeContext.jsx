@@ -27,6 +27,7 @@ export function ThemeProvider({ children }) {
   };
 
   return (
+    // Single Context: Bad for performance if values change often (set up two context both for value and setter/dispatch)
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>

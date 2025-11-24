@@ -2,6 +2,7 @@
 import React from 'react';
 import { useCounterValue } from '../CounterContext';
 
+// Only uses useCounterValue
 function DisplayCounter() {
   // This component consumes the VALUE.
   // It WILL re-render every time the 'count' changes.

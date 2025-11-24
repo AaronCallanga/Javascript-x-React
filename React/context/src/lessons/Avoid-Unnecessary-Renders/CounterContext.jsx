@@ -9,7 +9,8 @@ const CounterSetValueContext = createContext(() => {}); // Default is a no-op fu
 export function CounterProvider({ children }) {
   const [count, setCount] = useState(0);
 
-  // Memoize the setter function value to ensure stability
+  // Memoize the setter function value to ensure stability 
+  // could also create another function that increments count then memoized instead of passing the setter directly
   const stableSetCount = useMemo(() => setCount, []);
 
   return (
