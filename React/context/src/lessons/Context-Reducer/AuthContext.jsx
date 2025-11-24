@@ -1,0 +1,71 @@
+// src/context/AuthContext.js
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
+
+// 7a. Create Context
+const AuthContext = createContext(null);
+
+// Initial State
+const initialState = {
+  user: null,
+  isAuthenticated: false,
+};
+
+// 7b. Define the Reducer Function
+function authReducer(state, action) {
+  switch (action.type) {
+    case 'LOGIN':
+      // Store user in local storage (simulated persistence)
+      localStorage.setItem('user', JSON.stringify(action.payload));
+      return { 
+        ...state, 
+        user: action.payload, 
+        isAuthenticated: true 
+      };
+    case 'LOGOUT':
+      // Clear user from local storage
+      localStorage.removeItem('user');
+      return { 
+        ...state, 
+        user: null, 
+        isAuthenticated: false 
+      };
+    // A case to check persistence on app load
+    case 'RESTORE_USER':
+        return { 
+            ...state, 
+            user: action.payload, 
+            isAuthenticated: !!action.payload 
+        };
+    default:
+      throw new Error(`Unhandled action type: ${action.type}`);
+  }
+}
+
+// 7c. Create the AuthProvider Component
+export function AuthProvider({ children }) {
+  const [state, dispatch] = useReducer(authReducer, initialState);
+
+  // Example of restoring session when the app loads
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    if (storedUser) {
+      dispatch({ type: 'RESTORE_USER', payload: storedUser });
+    }
+  }, []);
+
+  return (
+    // Provide both the state and the dispatch function to all children
+    <AuthContext.Provider value={{ state, dispatch }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+// 7d. Create the Custom Hook for Consumption
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}

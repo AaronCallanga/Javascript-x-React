@@ -35,7 +35,9 @@ export function ThemeProvider({ children }) {
 
 // Create the Custom Hook for Consumption
 // This is best practice for clean usage
+// Components will just call this function to get the context object and destructure its value
 export const useTheme = () => {
+  // Instead of destructuring it, we will return the whole context/state object
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');

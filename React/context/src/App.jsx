@@ -1,4 +1,5 @@
 import { Basics } from "./lessons/Basics";
+import { ContextAndReducer } from "./lessons/ContextAndReducer";
 import { ProductionSetup } from "./lessons/ProductionSetUp";
 
 
@@ -17,6 +18,11 @@ function App() {
 
       {/* --- Section 2: Production Setup (Separate Context File | Multiple Values | Derived State) --- */}
       <ProductionSetup />
+
+      <hr />
+
+      {/* --- Section 3: Context + useReducer Pattern (More Scalable) --- */}
+      <ContextAndReducer />
 
       <hr />
     </>
