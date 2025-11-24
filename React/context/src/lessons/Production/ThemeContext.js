@@ -1,5 +1,7 @@
-// src/context/ThemeContext.js
 import { createContext, useContext, useState }  from "react";
+
+// 1. The Context Definition and Logic File
+// This file centralizes all theme management logic. It uses a custom hook useTheme() for clean consumption.
 
 // Create the Context
 const ThemeContext = createContext(null); // Default value is often set to null in this pattern
