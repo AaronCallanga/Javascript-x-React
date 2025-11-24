@@ -3,6 +3,7 @@ import { Basics } from "./lessons/Basics";
 import { ContextAndAuth } from "./lessons/ContextAndAuth";
 import { ContextAndReducer } from "./lessons/ContextAndReducer";
 import { ContextAndUseEffect } from "./lessons/ContextAndUseEffect";
+import { ContextWithDefault } from "./lessons/ContextWithDefault";
 import { ProductionSetup } from "./lessons/ProductionSetUp";
 
 function App() {
@@ -11,6 +12,18 @@ function App() {
   // 1. Create Context → like defining a “global store”
   // 2. Wrap components with Provider → exposing values
   // 3. Consume using useContext → access data instantly
+
+  /* 🟧 When NOT To Use Context
+  Avoid Context for:
+    -frequency updates (e.g., input typing)
+    - large data objects (re-rerenders everywhere)
+    - fetch-heavy data (use React Query or SWR)
+  Use Context for:
+    - auth
+    - theme
+    - user settings
+    - small global config
+  */
   return (
     <>
       {/* --- Section 1: Basics of useEffect --- */}
@@ -40,6 +53,11 @@ function App() {
 
       {/* --- Section 6: Fetching with Context + useEffect (Global Data Store) --- */}
       <ContextAndUseEffect />
+
+      <hr />
+
+      {/* --- Section 7: Context Default Value (Useful for Testing) --- */}
+      <ContextWithDefault />
 
       <hr />
     </>

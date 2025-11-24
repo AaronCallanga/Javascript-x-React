@@ -8,5 +8,7 @@ Get Cheatsheet
 ✅ React router
 ✅ Component Rendering Deep Dive (memo, useCallback, rerender control)
 ✅ React Custom Hooks (your own useX patterns — truly powerful)
+✅ Testing (jest)
 ✅ React 19 features
+
 
