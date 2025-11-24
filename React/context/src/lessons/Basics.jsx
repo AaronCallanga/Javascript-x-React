@@ -4,11 +4,11 @@ import React, { createContext, useContext, useState } from "react";
 // --- Step 1: Create Context (Define the "global store") ---
 // We create a new context object.
 // The default value (here 'Guest User') is used when a component doesn't have a matching Provider above it in the tree.
-const UserContext = createContext("Guest User"); // just export it for other files to access and use the context 'UserContext'
+export const UserContext = createContext("Guest User"); // just export it for other files to access and use the context 'UserContext'
 
 // A custom component for the Provider logic
 // you can export this too and put it in higher level tree to wrap children components
-const UserProvider = ({ children }) => {
+export const UserProvider = ({ children }) => {
   
   const [user, setUser] = useState("Jane Doe");
 

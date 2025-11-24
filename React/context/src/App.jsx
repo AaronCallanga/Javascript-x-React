@@ -12,6 +12,11 @@ function App() {
       <Basics />
 
       <hr />
+
+      {/* --- Section 2: Production Setup (Separate Context File | Multiple Values | Derived State) --- */}
+      <Basics />
+
+      <hr />
     </>
   );
 }
