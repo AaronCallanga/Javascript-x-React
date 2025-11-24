@@ -1,6 +1,7 @@
 // ThemeToggleButton.js
 import React from 'react';
-import { useTheme } from './ThemeContext'; // Import the custom hook
+import { useTheme } from '../ThemeContext';
+ // Import the custom hook
 
 // The component below will function correctly even if it's rendered outside of the ThemeProvider.
 function ThemeToggleButton() {
