@@ -1,5 +1,6 @@
 import { AvoidUnnecessaryRerenders } from "./lessons/AvoidUnnecessaryRerenders";
 import { Basics } from "./lessons/Basics";
+import { ContextAndAuth } from "./lessons/ContextAndAuth";
 import { ContextAndReducer } from "./lessons/ContextAndReducer";
 import { ProductionSetup } from "./lessons/ProductionSetUp";
 
@@ -31,8 +32,8 @@ function App() {
 
       <hr />
 
-            {/* --- Section 5: Context for API Auth (Highly Used in React Apps) --- */}
-      <AvoidUnnecessaryRerenders />
+      {/* --- Section 5: Context for API Auth (Highly Used in React Apps) --- */}
+      <ContextAndAuth />
 
       <hr />
     </>
