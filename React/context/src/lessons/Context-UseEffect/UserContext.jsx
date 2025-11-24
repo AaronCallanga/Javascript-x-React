@@ -49,3 +49,12 @@ export function UserProvider({ children }) {
 
 // Custom hook to easily consume the context
 export const useUser = () => useContext(UserContext);
+
+// or
+// export function useUser() {
+//   const context = useContext(UserContext);
+//   if (context === undefined) {
+//     throw new Error('useCounterSetValue must be used within a CounterProvider');
+//   }
+//   return context;
+// }
