@@ -4,10 +4,12 @@ import React, { createContext, useContext, useState } from "react";
 // --- Step 1: Create Context (Define the "global store") ---
 // We create a new context object.
 // The default value (here 'Guest User') is used when a component doesn't have a matching Provider above it in the tree.
-const UserContext = createContext("Guest User");
+const UserContext = createContext("Guest User"); // just export it for other files to access and use the context 'UserContext'
 
 // A custom component for the Provider logic
+// you can export this too and put it in higher level tree to wrap children components
 const UserProvider = ({ children }) => {
+  
   const [user, setUser] = useState("Jane Doe");
 
   return (
@@ -62,10 +64,13 @@ export const Basics = () => {
     <>
       <h1> 🎯 1. Basics of useEffect</h1>
       <UserProvider>
-        <h1>React Context Example</h1>
         <WelcomeMessage />
         <UserProfile />
       </UserProvider>
     </>
   );
 };
+
+// Create Context: Define the UserContext with an optional default value.
+// Provider Component: Create a wrapper component (like UserProvider) that uses UserContext.Provider to expose the values/state to its children.
+// Wrap Components: Place the UserProvider component high up in your component tree so that any child component needing the data is wrapped by it.
