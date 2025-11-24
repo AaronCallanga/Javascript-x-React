@@ -8,7 +8,7 @@ export const ContextAndAuth = () => {
   return (
     <AuthProvider>
       <div style={{ padding: '20px' }}>
-        <h1>API Authentication Context Example</h1>
+        <h1> 🎯 3. Context for API Auth (Highly Used in React Apps)</h1>
         <Header />
         <main>
           <ProfilePage />

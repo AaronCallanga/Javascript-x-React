@@ -8,7 +8,7 @@ export const ContextAndReducer = () => {
   return (
     <AuthProvider>
       <div style={{ padding: "20px" }}>
-        <h1> 🎯 2. Context + useReducer</h1>
+        <h1> 🎯 3. Context + useReducer</h1>
         {/* Components below this line can access the auth context through useAuth() custom hook */}
         <LoginForm />
         <UserDashboard />
