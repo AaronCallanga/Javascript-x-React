@@ -1,3 +1,4 @@
+import { UseMemo } from "./lessons/UseMemo";
 import { UseReducer } from "./lessons/UseReducer";
 import { UseRef } from "./lessons/UseRef";
 
@@ -11,6 +12,11 @@ function App() {
 
       {/* --- Section 2: useRef — For Changing State Without Re-renders --- */}
       <UseRef />
+
+      <hr />
+
+      {/* --- Section 3: useMemo — Memoize Expensive Computations --- */}
+      <UseMemo />
 
       <hr />
     </>
