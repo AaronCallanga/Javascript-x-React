@@ -36,3 +36,13 @@ function App() {
 }
 
 export default App;
+
+/*
+🔥 Summary Table (Super Useful)
+Hook	              Purpose	                          When to Use	                           Common Pair
+useReducer	        Complex state	                    multi-step updates	                   useContext
+useRef	            Mutable values, DOM	              timers, prev values, focus	           useEffect
+useMemo	            Memoize expensive calculations	  derived values	                       useCallback
+useCallback	        Memoize functions	                child props, stable fns	               React.memo
+React.memo	        Skip unnecessary renders	        props unchanged	                   useCallback + useMemo
+*/
