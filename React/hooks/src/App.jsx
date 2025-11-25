@@ -1,3 +1,4 @@
+import { ReactMemo } from "./lessons/ReactMemo";
 import { UseCallback } from "./lessons/UseCallback";
 import { UseMemo } from "./lessons/UseMemo";
 import { UseReducer } from "./lessons/UseReducer";
@@ -28,7 +29,7 @@ function App() {
       <hr />
 
       {/* --- Section 5: React.memo — Prevent Useless Re-renders To Child Components --- */}
-      <UseCallback />
+      <ReactMemo />
 
       <hr />
     </>

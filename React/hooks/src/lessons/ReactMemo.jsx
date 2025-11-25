@@ -56,7 +56,7 @@ export const ReactMemo = () => {
 
   return (
     <div style={themeStyles}>
-      <h1>Parent Component</h1>
+      <h1>🎯 4. React.memo — Prevent Useless Re-renders</h1>
 
       <p>Parent Theme State: {darkTheme ? 'Dark' : 'Light'}</p>
       
