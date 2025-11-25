@@ -1,5 +1,11 @@
 import React, { useReducer } from "react";
-
+/*
+Think of this as mini Redux inside a component.
+📌 When to use:
+    When state updates depend on previous state.
+    When updates are grouped (add/remove/reset).
+    When state becomes complicated (multiple small useState becomes messy).
+*/
 // --- 1. Define Initial State ---
 const initialState = {
   items: [],
@@ -33,8 +39,8 @@ function cartReducer(state, action) {
 
       return {
         ...state,
-        items: updatedItems,        // Update items
-        cartCount: state.cartCount + 1,     // Update cartCount
+        items: updatedItems, // Update items
+        cartCount: state.cartCount + 1, // Update cartCount
       };
 
     case "REMOVE_ITEM":
@@ -106,7 +112,7 @@ export function UseReducer() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h1>🎯 1. Basic useState</h1>
+      <h1>🎯 1. useReducer — For Complex State Logic</h1>
       <h3>Shopping Cart Demo (useReducer)</h3>
 
       {/* Display Total Count from the state */}
