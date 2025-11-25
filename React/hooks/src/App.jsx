@@ -1,3 +1,4 @@
+import { UseCallback } from "./lessons/UseCallback";
 import { UseMemo } from "./lessons/UseMemo";
 import { UseReducer } from "./lessons/UseReducer";
 import { UseRef } from "./lessons/UseRef";
@@ -15,14 +16,14 @@ function App() {
 
       <hr />
       {/* Performance Hooks (Memoization)*/}
-      
+
       {/* --- Section 3: useMemo — Memoize Expensive Computations --- */}
       <UseMemo />
 
       <hr />
 
-            {/* --- Section 3: useMemo — Memoize Expensive Computations --- */}
-      <UseMemo />
+      {/* --- Section 4: useCallback — Memoize Functions --- */}
+      <UseCallback />
 
       <hr />
     </>
