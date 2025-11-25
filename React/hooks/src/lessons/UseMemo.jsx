@@ -67,8 +67,17 @@ export const UseMemo = () => {
       <p>
         **How to test:** 
         1. Type a new number in the input field. The console logs "Calculating..." (expected).
-        2. Click "Toggle Dark Mode". The UI changes color, but the console does NOT log "Calculating..." again because `useMemo` is using the cached result instead of recalculate. Without useMemo, it will always recalculate every render despite having the same value
+        2. Click "Toggle Dark Mode". The UI changes color, but the console does NOT log "Calculating..." again because `useMemo` is using the cached result instead of recalculate. Without useMemo, it will always recalculate every render (state updated) despite having the same value
       </p>
     </div>
   );
 }
+
+/*
+Explanation of the Demonstration
+    Without useMemo (Problem): If we called calculateExpensiveValue(number) directly in the render body without useMemo, that function would run every time any state updated (e.g., toggling dark mode). This would freeze the UI temporarily on every single interaction, creating a terrible user experience.
+
+    With useMemo (Solution): The expensive function is wrapped in useMemo.
+        - It only re-runs the function when number changes.
+        - When dark changes, React sees the memoized value is already cached and simply reuses the previous result, keeping the UI snappy.
+*/

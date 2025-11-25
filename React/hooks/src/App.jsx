@@ -14,8 +14,14 @@ function App() {
       <UseRef />
 
       <hr />
-
+      {/* Performance Hooks (Memoization)*/}
+      
       {/* --- Section 3: useMemo — Memoize Expensive Computations --- */}
+      <UseMemo />
+
+      <hr />
+
+            {/* --- Section 3: useMemo — Memoize Expensive Computations --- */}
       <UseMemo />
 
       <hr />
