@@ -26,6 +26,11 @@ function App() {
       <UseCallback />
 
       <hr />
+
+      {/* --- Section 5: React.memo — Prevent Useless Re-renders To Child Components --- */}
+      <UseCallback />
+
+      <hr />
     </>
   );
 }
