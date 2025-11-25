@@ -38,7 +38,7 @@ const ExpensiveComponent = ({ initialData }) => {
   // It won't run when 'count' changes.
   const memoizedValue = useMemo(() => {
     return calculateExpensiveData(initialData);
-  }, [initialData]); // Dependency array
+  }, [initialData]); // Dependency array. If this change, re-run calculation
 
   return (
     <div>
